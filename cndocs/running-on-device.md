@@ -131,7 +131,7 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0666", GROUP="plugdev"' | 
 
 <block class="mac windows linux android" />
 
-下面检查你的设备是否能正确连接到 ADB（Android Debug Bridge），使用`adb devices`命令：
+下面检查你的设备是否能正确连接到 ADB（Android Debug Bridge），使用`adb devices`命令（列举已连接的调试设备）：
 
 ```sh
 $ adb devices
@@ -228,7 +228,7 @@ To still use xip.io behind your router:
 
 <block class="mac windows linux android" />
 
-1.  运行`adb reverse tcp:8081 tcp:8081`
+1.  运行`adb reverse tcp:8081 tcp:8081`，将手机的8081端口重定向到电脑的8081端口。
 2.  不需要更多配置，你就可以使用`Reload JS`和其它的开发选项了。
 
 ### (Android 5.0 以下)通过 Wi-Fi 连接你的本地开发服务器
