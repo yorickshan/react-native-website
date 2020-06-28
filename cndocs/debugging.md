@@ -176,7 +176,9 @@ $ npx react-native log-android
 
 `adb reverse tcp:8081 tcp:8081`
 
-如果设备 Android 版本在 5.0 以下，则可以在开发者菜单中选择"Dev Settings - Debug server host for device"，然后在其中填入电脑的”IP 地址:端口“。
+> Android 允许通过 ADB，把 Android 系统上的某个端口映射到电脑（adb forward），或者把电脑上的某个端口映射到Android 系统（adb reverse）。
+
+> 假设电脑上开启的服务，监听的端口为8000。Android手机通过USB连接电脑后，执行 adb reverse tcp:8000 tcp:8000，然后在手机中访问127.0.0.1:8000，就可以访问到电脑上启动的服务了。
 
 > 如果在 Chrome 调试时遇到一些问题，那有可能是某些 Chrome 的插件引起的。试着禁用所有的插件，然后逐个启用，以确定是否某个插件影响到了调试。
 
